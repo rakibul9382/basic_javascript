@@ -19,7 +19,6 @@ let myCreatedDate = new Date("01-25-2025")
 console.log(myDate.getFullYear());
 const now = new Date();
 
-
 const options = {
     timeZone: 'Asia/Kolkata',
     year: 'numeric',
@@ -30,7 +29,9 @@ const options = {
     second: 'numeric',
     hour12: true
     
+    
 };
+
 const indiaTime = now.toLocaleString('en-IN', options);
 console.log(indiaTime);
 

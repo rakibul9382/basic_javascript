@@ -4,14 +4,14 @@ let score = "33abc" //if we use null then valueInNumber is print 0
 // console.log(typeof score);
 // console.log(typeof (score));
 
-// let valueInNumber = Number(score)
-// console.log(typeof valueInNumber);
-// console.log(valueInNumber); //NaN => not a number
+ let valueInNumber = Number(score)
+ console.log(typeof valueInNumber);
+ console.log(valueInNumber); //NaN => not a number
 
-// let score1 = null
-// let valueInNumber1 = Number(score1)
-// console.log(typeof valueInNumber1);
-// console.log(valueInNumber1);  //0
+ let score1 = null
+ let valueInNumber1 = Number(score1)
+ console.log(typeof valueInNumber1);
+ console.log(valueInNumber1);  //0
 
 // let score2 = undefined
 // let valueInNumber2 = Number(score2)

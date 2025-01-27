@@ -12,15 +12,21 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.pop() //remove the last element
 // console.log(myArr);
 // console.log(myArr.includes(9));
-// console.log(myArr.indexOf(3));
-// const  newArray = myArr.join()
-// console.log(myArr);
-// console.log(typeof newArray);
+ console.log(myArr.indexOf(3));
+ const  newArray = myArr.join('and') // here and is separator default separator is ","
+ console.log(myArr);
+ console.log(typeof newArray);
 console.log("a",myArr);
 const myn1 = myArr.slice(1,3)
 console.log(myn1)
 console.log("b",myArr);
-const myn2 = myArr.splice(1,3)
-console.log("c",myArr);
-console.log(myn2);
 
+const myn2 = myArr.splice(1,3)
+console.log(myn2);
+console.log("c",myArr);
+console.log(newArray);
+
+console.log(typeof newArray.split("and"));
+
+
+console.log(typeof myArr.indexOf(2));
