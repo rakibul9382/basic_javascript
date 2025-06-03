@@ -27,3 +27,35 @@ selectButton.forEach(function(button){
     }
   })
 })
+```
+# project 2
+# solution code 
+
+``` java script
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const result = document.querySelector('#results');
+  if (height === '' || height < 0 || isNaN(height)) {
+    result.innerHTML = 'plaese give a valid height ';
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    result.innerHTML = 'plaese give a valid weight ';
+  } else {
+    const BMI = (weight / ((height * height) / 10000)).toFixed(2);
+    //show the result
+    let bmivalue = parseFloat(BMI); //  convert string to float
+    let message = '';
+    if (bmivalue < 18.6) {
+      message = 'under weight';
+    } else if (bmivalue > 18.6 && bmivalue < 24.9) {
+      message = 'normal weight';
+    } else {
+      message = 'over weight weight';
+    }
+    result.innerHTML = `<span>${BMI}- ${message}</span>`;
+  }
+})
+  ```
