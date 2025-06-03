@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const Div = document.createElement('div')
+    Div.className = "rakibul"
+    console.log(Div);
+    
+    Div.id = Math.round(Math.random()*10+1);
+    Div.setAttribute("titele","Dom Manipulating")
+    const myParagraph = document.createElement('p')
+    myParagraph.innerText = "hi! my name is sk rakibul islam"
+    Div.appendChild(myParagraph)
+    document.body.appendChild(Div)
+</script>
+</html>

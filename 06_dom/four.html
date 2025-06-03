@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body style="background-color: #212121; color: antiquewhite;">
+  <ul class="unOrderList">
+    <li>javaScript</li>
+  </ul>
+</body>
+<script>
+  function addOptimizedLanguage(langName) {
+    const li = document.createElement('li');
+    li.textContent = langName;
+    const ul = document.querySelector('.unOrderList');
+    ul.appendChild(li);
+  }
+
+  // Add new items
+  addOptimizedLanguage("java");
+  addOptimizedLanguage("python");
+
+  // Highlight 2nd item
+  const selectItem = document.querySelector('.unOrderList li:nth-child(2)');
+  selectItem.style.color = 'lightcoral'; // visible red shade
+  selectItem.style.fontWeight = 'bold';
+  selectItem.style.backgroundColor = '#333';
+
+  // Replace it AFTER 2 seconds (just to show the red highlight first)
+  setTimeout(() => {
+    const newli = document.createElement('li');
+    newli.textContent = "mojo";
+    selectItem.replaceWith(newli);
+  }, 2000); // 2 second delay
+
+  // Change first <li> to "typeScript"
+  const firstLang = document.querySelector('.unOrderList li:first-child');
+  firstLang.textContent = "typeScript";
+
+</script>
+</html>
