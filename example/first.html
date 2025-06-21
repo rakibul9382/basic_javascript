@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch API Demo</title>
+</head>
+<body>
+  <h2>Send Your Name</h2>
+  <form id="nameForm">
+    <input type="text" id="userName" placeholder="Enter your name" required />
+    <button type="submit">Send</button>
+  </form>
+
+  <h3>Server Response:</h3>
+  <pre id="responseBox"></pre>
+
+  <script>
+    document.getElementById("nameForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // stop page reload
+
+      const nameValue = document.getElementById("userName").value;
+
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST", // ✅ predefined method
+        headers: {
+          "Content-Type": "application/json" // ✅ predefined headers
+        },
+        body: JSON.stringify({ name: nameValue }) // ✅ predefined body
+      })
+      .then(response => response.json()) // convert JSON
+      .then(data => {
+        document.getElementById("responseBox").textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        document.getElementById("responseBox").textContent = "Error: " + error;
+      });
+    });
+  </script>
+</body>
+</html>
